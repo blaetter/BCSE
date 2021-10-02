@@ -22,7 +22,7 @@ use Drupal\Core\Config\ConfigFactory;
  *
  * @SearchPlugin(
  *   id = "blaetter_bcse_search",
- *   title = @Translation("Bing Custom Search")
+ *   title = @Translation("Bing Custom Search (Blaetter)")
  * )
  */
 class Search extends ConfigurableSearchPluginBase implements AccessibleInterface {
