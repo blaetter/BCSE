@@ -1,5 +1,5 @@
 {
-    "name": "drupal/bcse",
+    "name": "drupal/blaetter_bcse",
     "type": "drupal-module",
     "description": "Provides access to Bing Search API, is a fork of the corresponding Drupal module.",
     "keywords": ["Drupal"],
