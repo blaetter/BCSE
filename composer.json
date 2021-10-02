@@ -1,0 +1,12 @@
+{
+    "name": "drupal/bcse",
+    "type": "drupal-module",
+    "description": "Provides access to Bing Search API, is a fork of the corresponding Drupal module.",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0+",
+    "version": "1.1-dev",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4"
+    }
+}
