@@ -1,0 +1,8 @@
+name: Bing Custom Search Engine
+type: module
+description: Provides integration with Bing Custom Search.
+core_version_requirement: ^8.8 || ^9
+package: Search
+dependencies:
+  - search
+  - key
