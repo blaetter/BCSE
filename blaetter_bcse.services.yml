@@ -1,0 +1,5 @@
+services:
+  blaetter_bcse.route_subscriber:
+    class: Drupal\blaetter_bcse\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

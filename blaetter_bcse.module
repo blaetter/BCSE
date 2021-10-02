@@ -10,10 +10,10 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function bcse_help($route_name, RouteMatchInterface $route_match) {
+function blaetter_bcse_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
     // Main module help for the Bing Custom Search Engine module.
-    case 'help.page.bcse':
+    case 'help.page.blaetter_bcse':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('Provides integration with Bing Custom Search.') . '</p>';

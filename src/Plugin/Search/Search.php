@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\bcse\Plugin\Search;
+namespace Drupal\blaetter_bcse\Plugin\Search;
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Form\FormStateInterface;
@@ -21,7 +21,7 @@ use Drupal\Core\Config\ConfigFactory;
  * Handles search using Bing Custom Search.
  *
  * @SearchPlugin(
- *   id = "bcse_search",
+ *   id = "blaetter_bcse_search",
  *   title = @Translation("Bing Custom Search")
  * )
  */
@@ -345,7 +345,7 @@ class Search extends ConfigurableSearchPluginBase implements AccessibleInterface
     try {
       $response = $this->httpClient->get($api_endpoint, $options);
     } catch (\Exception $e) {
-      \Drupal::logger('bcse')->error($e->getMessage());
+      \Drupal::logger('blaetter_bcse')->error($e->getMessage());
       return NULL;
     }
 

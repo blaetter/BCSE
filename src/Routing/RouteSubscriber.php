@@ -1,10 +1,10 @@
 <?php
 
-namespace Drupal\bcse\Routing;
+namespace Drupal\blaetter_bcse\Routing;
 
 use Drupal\Core\Routing\RouteSubscriberBase;
 use Symfony\Component\Routing\RouteCollection;
-use Drupal\bcse\Plugin\Search\Search as BcseSearch;
+use Drupal\blaetter_bcse\Plugin\Search\Search as BcseSearch;
 
 /**
  * Listens to the dynamic route events.
@@ -24,7 +24,7 @@ class RouteSubscriber extends RouteSubscriberBase {
         $route = $collection->get("search.view_$entity_id")
       ) {
         $route->setDefault('_controller',
-          'Drupal\bcse\Controller\BcseSearchController::view');
+          'Drupal\blaetter_bcse\Controller\BcseSearchController::view');
       }
     }
   }

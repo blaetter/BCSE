@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\bcse\Controller;
+namespace Drupal\blaetter_bcse\Controller;
 
 use Drupal\search\Controller\SearchController;
 use Drupal\search\SearchPageInterface;
@@ -15,7 +15,7 @@ class BcseSearchController extends SearchController {
    * {@inheritdoc}
    */
   public function view(Request $request, SearchPageInterface $entity) {
-    /** @var \Drupal\bcse\Plugin\Search\Search $plugin */
+    /** @var \Drupal\blaetter_bcse\Plugin\Search\Search $plugin */
     $plugin = $entity->getPlugin();
 
     $build = parent::view($request, $entity);
