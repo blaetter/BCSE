@@ -346,12 +346,12 @@ class Search extends ConfigurableSearchPluginBase implements AccessibleInterface
             $api_endpoint = $default_config['api_endpoint'];
         }
 
-        $keywords = $this->getKeywords();
+        $keywords = $this->getKeywords() . ' site:www.blaetter.de';
 
         $options = [
             'query' => [
                 'q' => $keywords,
-                'customconfig' => $this->configuration['custom_config'],
+                //'customconfig' => $this->configuration['custom_config'],
                 'responseFilter' => 'Webpages',
                 'mkt' => $market,
                 'safesearch' => $this->configuration['safe_search'],
@@ -489,7 +489,7 @@ class Search extends ConfigurableSearchPluginBase implements AccessibleInterface
 
         if ($node instanceof \Drupal\Core\Entity\EntityInterface  && 'story' == $node->bundle()) {
             unset($item_array['title']);
-            $item_array['snippet'] = render(
+            $item_array['snippet'] = \Drupal::service('renderer')->render(
                 \Drupal::entityTypeManager()->getViewBuilder('node')->view($node, 'teaser_ausgabe')
             );
         }
