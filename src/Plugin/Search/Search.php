@@ -13,7 +13,6 @@ use Drupal\Core\Site\Settings;
 use Drupal\Core\Url;
 use Drupal\key\KeyRepository;
 use Drupal\search\Plugin\ConfigurableSearchPluginBase;
-use Drupal\Search\Plugin\SearchInterface;
 use GuzzleHttp\Client;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -445,7 +444,7 @@ class Search extends ConfigurableSearchPluginBase implements AccessibleInterface
      * Gets the node object by path alias - if available
      *
      * @param string $alias
-     * @return Node|bool Node object if found, false otherwise
+     * @return \Drupal\node\Entity\Node|bool Node object if found, false otherwise
      */
     protected function getNodeByAlias($alias)
     {
